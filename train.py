@@ -14,10 +14,10 @@ if __name__ == '__main__':
     rospy.init_node('ddpg_stage_5')
     env = Env()
     state = env.reset()
-    Agent = agent.AgentSAC()
+    Agent = agent.AgentPPO()
 
     #初始化训练参数
-    arguments = Arguments(agent = Agent , env = env , gpu_id= 00.0 ,if_on_policy= False)   #ppo is on_policy
+    arguments = Arguments(agent = Agent , env = env , gpu_id= 00.0 ,if_on_policy= True)   #ppo is on_policy
     # arguments.if_per = True 
     arguments.init_before_training()
     # time_ = str(time.time())
