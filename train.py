@@ -13,7 +13,6 @@ from rospy.client import FATAL
 if __name__ == '__main__':
     rospy.init_node('ddpg_stage_5')
     env = Env()
-    state = env.reset()
     Agent = agent.AgentPPO()
 
     #初始化训练参数
